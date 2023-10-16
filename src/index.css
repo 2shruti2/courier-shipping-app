@@ -27,31 +27,35 @@
     display: block;
   }
 
+  .parallex {
+    transform: translateY(-25%);
+    transition: transform 0.2s ease;
+  }
 }
 
 @layer utilities {
 
   .nav-link {
-    @apply pt-5 pb-5  hover:border-t-4 hover:border-yellow-500 border-t-4 border-transparent
+    @apply pt-5 pb-5 hover:border-t-4  hover:border-yellow-500 border-t-4 border-transparent
   }
 
-  .nav{
-    @apply pt-5 pb-5 pl-10 pr-10 sticky 
+  .nav {
+    @apply pt-5 pb-5 pl-10 pr-10 sticky
   }
-  
-  .padding-lg{
+
+  .padding-lg {
     @apply pt-40 pb-40 pl-28 pr-28
   }
 
-  .padding-md{
+  .padding-md {
     @apply pt-28 pb-10 pl-16 pr-16
   }
 
-  .yellow-btn{
+  .yellow-btn {
     @apply rounded-[50%] h-[54px] w-[54px] flex text-center justify-center items-center bg-yellow-400 p-4
   }
 
-  .white-nav{
-    @apply  bg-white text-primary
+  .white-nav {
+    @apply bg-white text-primary
   }
 }

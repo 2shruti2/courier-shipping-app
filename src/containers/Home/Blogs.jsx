@@ -1,3 +1,4 @@
+import YellowBtn from "../../components/YellowBtn"
 
 const Blogs = () => {
     return (
@@ -23,9 +24,7 @@ const Blogs = () => {
                                 <h4 className="text-2xl font-bold pb-6">The Great Innovators</h4>
                                 <p className="text-dark-grey text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue ligula</p>
                                 <div className="flex pt-5 ">
-                                    <div className="">
-                                        <div className="yellow-btn">+</div>
-                                    </div>
+                                    <YellowBtn/>
                                     <div className="text-primary flex justify-center items-center text-center text-md font-semibold ml-4">Read more</div>
                                 </div>
                             </div>
@@ -47,9 +46,7 @@ const Blogs = () => {
                                 <h4 className="text-2xl font-bold pb-2">The Story of Civilization</h4>
                                 <p className="text-dark-grey text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue ligula</p>
                                 <div className="flex pt-5 ">
-                                    <div className="">
-                                        <div className="yellow-btn">+</div>
-                                    </div>
+                                    <YellowBtn/>
                                     <div className="text-primary flex justify-center items-center text-center text-md font-semibold ml-4">Read more</div>
                                 </div>
                             </div>
@@ -71,9 +68,7 @@ const Blogs = () => {
                                 <h4 className="text-2xl font-bold pb-6">Building For Society</h4>
                                 <p className="text-dark-grey text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue ligula</p>
                                 <div className="flex pt-5 ">
-                                    <div className="">
-                                        <div className="yellow-btn">+</div>
-                                    </div>
+                                    <YellowBtn/>
                                     <div className="text-primary flex justify-center items-center text-center text-md font-semibold ml-4">Read more</div>
                                 </div>
                             </div>

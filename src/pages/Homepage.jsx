@@ -3,7 +3,7 @@ import { Aboutus, Banner, Blogs, Header, Header2, Quote, Services, Team, Testimo
 
 const Homepage = () => {
   return (
-    <div>
+    <div >
         <Navbar/>
         <Header/>
         <Header2/>

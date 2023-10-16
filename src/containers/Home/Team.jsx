@@ -1,3 +1,4 @@
+import YellowBtn from "../../components/YellowBtn"
 
 const Team = () => {
     return (
@@ -10,14 +11,12 @@ const Team = () => {
                     </div>
 
                     <div className="flex pt-5 ">
-                        <div className="">
-                            <div className="yellow-btn">+</div>
-                        </div>
+                        <YellowBtn/>
                         <div className="text-primary text-md font-semibold ml-4">View more <br /> about our services</div>
                     </div>
                 </div>
 
-                <div className=" pl-16 max-md:pl-0 pt-10 ">
+                <div className=" pl-16 max-md:pl-0 pt-10 animate-[fade-in-down_1s_ease-in-out] ">
                     <img className="" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/main-home-img-2.jpg" alt="" />
                 </div>
 
@@ -30,33 +29,33 @@ const Team = () => {
                     <div className="flex mt-16  ">
                         <img className="rounded-full w-[100px] h-[100px]" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/main-home-team-1-1.png" alt="" />
                         <div className="mt-6 ml-6">
-                        <h6 className="text-dark-grey text-md font-semibold">Developer</h6>
-                        <h4 className="text-xl font-bold" >Lionel Todd</h4>
+                            <h6 className="text-dark-grey text-md font-semibold">Developer</h6>
+                            <h4 className="text-xl font-bold" >Lionel Todd</h4>
                         </div>
                     </div>
                     <div className="flex mt-16  ">
                         <img className="rounded-full w-[100px] h-[100px]" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/team-single-img1.png" alt="" />
                         <div className="mt-6 ml-6">
-                        <h6 className="text-dark-grey text-md font-semibold">Copywriter</h6>
-                        <h4 className="text-xl font-bold" >Nina West</h4>
+                            <h6 className="text-dark-grey text-md font-semibold">Copywriter</h6>
+                            <h4 className="text-xl font-bold" >Nina West</h4>
                         </div>
                     </div>
                     <div className="flex mt-16  ">
                         <img className="rounded-full w-[100px] h-[100px]" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/main-home-team-3-1.png" alt="" />
                         <div className="mt-6 ml-6">
-                        <h6 className="text-dark-grey text-md font-semibold">Co Founder</h6>
-                        <h4 className="text-xl font-bold" >Scott Moran</h4>
+                            <h6 className="text-dark-grey text-md font-semibold">Co Founder</h6>
+                            <h4 className="text-xl font-bold" >Scott Moran</h4>
                         </div>
                     </div>
                     <div className="flex mt-16  ">
                         <img className="rounded-full w-[100px] h-[100px]" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/main-home-team-4-1.png" alt="" />
                         <div className="mt-6 ml-6">
-                        <h6 className="text-dark-grey text-md font-semibold">Web Designer</h6>
-                        <h4 className="text-xl font-bold" >Suzie Marsh</h4>
+                            <h6 className="text-dark-grey text-md font-semibold">Web Designer</h6>
+                            <h4 className="text-xl font-bold" >Suzie Marsh</h4>
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </section>
