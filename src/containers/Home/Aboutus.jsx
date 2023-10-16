@@ -20,7 +20,7 @@ const Aboutus = () => {
           <h3 className='text-lg font-semibold '>LTL Freight</h3>
           </button>
           <button className={`${currentIndex === 3  ? 'border-b-[5px] pb-10 border-yellow-400' : 'border-b-[1px] border-gray-400 pb-10'} `} onClick={() => {setCurrentIndex(3)}}>
-          <h3 className='text-lg font-semibold '>Sea Freught</h3>
+          <h3 className='text-lg font-semibold '>Sea Freight</h3>
           </button>
           <button className={`${currentIndex === 4  ? 'border-b-[5px] pb-10 border-yellow-400' : 'border-b-[1px] border-gray-400 pb-10'} `} onClick={() => {setCurrentIndex(4)}}>
           <h3 className='text-lg font-semibold '>Land Freight</h3>
