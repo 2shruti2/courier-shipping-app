@@ -4,7 +4,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 const YellowBtn = () => {
     return (
         <div className="">
-            <div className="yellow-btn hover:animate-spin"><FontAwesomeIcon icon={faPlus} /></div>
+            <div className="yellow-btn hover:animate-rotate"><FontAwesomeIcon icon={faPlus} /></div>
         </div>
     )
 }

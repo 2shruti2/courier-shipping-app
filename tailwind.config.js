@@ -59,13 +59,22 @@ module.exports = {
 
           },
         },
+        rotateCenter : {
+          '0%' :{
+                    transform: 'rotate(0)' ,
+          },
+          '100%' :{
+                    transform: 'rotate(180deg)',
+          }
+        }
         
       },
 
       animation: {
         right: 'comefromright 0.5s ease-out',
         left: 'comefromleft 0.5s ease-out',
-        img: 'imgfromleft 0.5s ease-in'
+        img: 'imgfromleft 0.5s ease-in',
+        rotate: 'rotateCenter 0.5s ease-in',
       },
 
       fontFamily: {

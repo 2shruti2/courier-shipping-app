@@ -4,9 +4,9 @@ import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 const Testimonial = () => {
     return (
         <section id="testimonial">
-            <div className="bg-man-cycle bg-no-repeat bg-center relative w-full min-h-screen  bg-cover font-sarabun xs:padding-md sm:padding-lg  text-white">
+            <div className="bg-man-cycle bg-no-repeat top-0 bg-center relative w-full min-h-screen  bg-cover font-sarabun xs:padding-md sm:padding-lg  text-white">
 
-                <div className='w-[50%] max-md:w-full '>
+                <div className='w-[50%] max-md:w-full absolute translate-y-1 '>
                     <div>
                         <FontAwesomeIcon icon={faQuoteLeft} size="2xl" style={{ color: "#ffffff" }} className='w-[80px] h-[70px]' />
                     </div>
