@@ -28,25 +28,73 @@ const Header = () => {
 
 
   useEffect(() => {
+    // setCurrentIndex(old=> old+=1)
     const timeoutId = setTimeout(() => {
       handleNextCick();
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(timeoutId);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
 
   return (
     <main className=" ">
 
-      <div className='flex overflow-hidden w-full h-screen md:h-full relative '>
-        <div className="w-[100vw] transition  duration-500 ease-in-out h-screen " >
-          <img alt='' src={slides[currentIndex]} className=" w-[100%] h-[100%] object-cover" />
+      {/* <div className='flex overflow-hidden w-full h-screen md:h-full relative '>
+        <div className="w-[100vw] transition-all  duration-500 ease-in h-screen   " >
+          <img alt='' src={slides[currentIndex]} className=" w-[100%] h-[100%] object-cover animate-fadein" />
+        </div>
+      </div> */}
+
+
+
+
+      <div className='flex overflow-hidden  w-full h-screen md:h-full relative '>
+        <div className='shrink-0 h-[100vh] w-[100vw]'>
+          <img alt="" src={slides[currentIndex]} className={`
+ ${currentIndex === 0
+              ? 'animate-fadein' :
+              currentIndex === 1
+                ? 'animate-fadein1' :
+                currentIndex === 2
+                  ? 'animate-fadein2' :
+                  currentIndex === 3
+                    ? 'animate-fadein3' : ''
+            }
+       w-[100%] h-[100%] object-cover`} />
+          {/* {[1,2,3,4].map((slide, index) =>(
+        <>
+        <img alt='' key={index} src={slides[currentIndex]} className={`w-[100%] h-[100%] object-cover animate-fadein`}/>  
+        </>
+      //   <div
+      //   // className={
+      //   //   `animate-fadein
+      //   //   shrink-0 h-[100vh] w-[100vw] 
+      //   //   `
+      //   // }
+      //    // currentIndex === 0 
+      //     // ? 'animate-fadein' :
+      //     // currentIndex === 1 
+      //     // ? 'animate-fadein1' :
+      //     // currentIndex === 2 
+      //     // ? 'animate-fadein2' :
+      //     // currentIndex === 3
+      //     // ? 'animate-fadein3' : ''
+      //    className={`antimate-fadein${index}
+       
+       
+      // shrink-0 h-[100vh] w-[100vw] `}
+      //  key={index}
+      // >
+      //     </div> 
+      )
+      )} */}
         </div>
       </div>
+
 
       <div className="absolute max-sm:hidden w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-10 cursor-pointer z-10">
         <button className='' onClick={handlePrevCick}><FontAwesomeIcon icon={faAngleLeft} size="2xl" style={{ color: "#ffffff", }} /></button>
@@ -56,15 +104,15 @@ const Header = () => {
       <div className='absolute max-sm:bottom-[10px] bottom-[40px] flex w-full justify-center transition-all ease-in-out duration-300' >
         {slides.map((slides, slidesIndex) => (
           <>
-          {currentIndex === slidesIndex ? 
-            <FontAwesomeIcon icon={faMinus} key={slidesIndex} style={{color: "#ffdd00",}} size='2xl' className='px-2 cursor-pointer z-10'
-            onClick={() => goToSlide(slidesIndex)} />
-            : 
-            <FontAwesomeIcon icon={faMinus} key={slidesIndex} style={{color: "#ffffff",}} size='2xl' className='px-2 cursor-pointer z-10'
-            onClick={() => goToSlide(slidesIndex)} />
+            {currentIndex === slidesIndex ?
+              <FontAwesomeIcon icon={faMinus} key={slidesIndex} style={{ color: "#ffdd00", }} size='2xl' className='px-2 cursor-pointer z-10'
+                onClick={() => goToSlide(slidesIndex)} />
+              :
+              <FontAwesomeIcon icon={faMinus} key={slidesIndex} style={{ color: "#ffffff", }} size='2xl' className='px-2 cursor-pointer z-10'
+                onClick={() => goToSlide(slidesIndex)} />
 
-          }
-          </>          
+            }
+          </>
         ))}
       </div>
 
@@ -78,11 +126,11 @@ const Header = () => {
 
           {hero.map((hero, Index) => (
             <div key={Index} className=' '>
-              {currentIndex === Index && 
-              <div className='animate-right'>
-                <h1 className='text-6xl font-[700] pb-2 '> {hero.h1} </h1>
-                <h3 className='text-lg'>{hero.h3}</h3>
-              </div>
+              {currentIndex === Index &&
+                <div className='animate-right'>
+                  <h1 className='text-6xl font-[700] pb-2 '> {hero.h1} </h1>
+                  <h3 className='text-lg'>{hero.h3}</h3>
+                </div>
               }
             </div>
           ))}

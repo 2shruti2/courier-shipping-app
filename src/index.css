@@ -27,14 +27,6 @@
     display: block;
   }
 
-  /* .parallex {
-    transform: translateY(-25%);
-    transition: transform 0.2s ease;
-  }
-
-  .layer {
-    transform: translateZ(-2px);
-  } */
 }
 
 @layer utilities {

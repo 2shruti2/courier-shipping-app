@@ -13,8 +13,9 @@ const Navbar = () => {
   useEffect(() => {
 
     const handleScroll = () => {
-      console.log(window.scrollY)
-      if (window.scrollY >= 620) { setIsfixed(true) }
+
+      console.log(window.scrollY, isfixed)
+      if (window.scrollY >= 300) { setIsfixed(true) }
       else { setIsfixed(false) }
     }
 
@@ -23,6 +24,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const [isSidebarOpen, setisSidebarOpen] = useState(false)
@@ -42,9 +44,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`${isfixed ? 'fixed bg-white text-black  border-none border-b-[0px]' : 'bg-transparent text-white'} w-full justify-between z-[20] h-[12%] max-md:h-[6%] max-sm:h-[10%] `} ref={navRef} >
-      <nav className=" flex w-full justify-between z-[20] bg-transparent absolute text-center items-center  text-lg
-    border-b-[1px] max-md:border-none  border-white-400 font-sarabun font-semibold "  >
+    <header className={`${isfixed ? 'fixed bg-white text-black  border-none border-b-[0px]' : 'bg-transparent text-white '} w-full  justify-between z-[20]  max-md:h-[6%] max-sm:h-[10%] `} ref={navRef} >
+<nav className={` ${isfixed ? 'bg-white ':'' } flex w-full justify-between z-[20] bg-transparent absolute text-center items-center  text-lg
+border-b-[1px] max-md:border-none  border-white-400 font-sarabun font-semibold `}  >
 
         <div className="text-center pt-1 pl-1 shrink-0 nav" >
           {isfixed ?
@@ -59,57 +61,58 @@ const Navbar = () => {
 
         <ul className="flex flex-1 justify-center p-2 mr-2 gap-10 max-lg:hidden ">
 
-          <li className='relative hover-trigger nav-link '>Home
+           <li className='relative hover-trigger nav-link '> <a href='/'>Home </a>
 
-            <ul className=' hover-target absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
-              <a href='/'><li className='p-2'>Main Home</li></a>
-              <a href='/'><li className='p-2'>Cargo Shipping </li></a>
-              <a href='/'><li className='p-2'>Maritime Transport</li></a>
-              <a href='/'><li className='p-2'>Air Freight</li></a>
-              <a href='/'><li className='p-2'>Rail Freight</li></a>
-              <a href='/'><li className='p-2'>Coming Soon</li></a>
-              <a href='/'><li className='p-2'>Divided Slider Home </li></a>
-              <a href='/'><li className='p-2'>Landing</li></a>
+            <ul className=' hover-target text-left absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Main Home</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Cargo Shipping </li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Maritime Transport</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Air Freight</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Rail Freight</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Coming Soon</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Divided Slider Home </li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Landing</li></a>
+            </ul>
+
+          </li>
+          
+
+          <li className='nav-link relative hover-trigger'><a href='/'> Pages </a>
+
+            <ul className=' hover-target text-left absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Our Team </li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Coming Soon</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Maritime Transport</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Air Freight</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>About us</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Divided Slider Home </li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Rail Freight</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Landing</li></a>
             </ul>
 
           </li>
 
-          <li className='nav-link relative hover-trigger'>Pages
-
-            <ul className=' hover-target absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
-              <a href='/'><li className='p-2'>Our Team </li></a>
-              <a href='/'><li className='p-2'>Coming Soon</li></a>
-              <a href='/'><li className='p-2'>Maritime Transport</li></a>
-              <a href='/'><li className='p-2'>Air Freight</li></a>
-              <a href='/'><li className='p-2'>About us</li></a>
-              <a href='/'><li className='p-2'>Divided Slider Home </li></a>
-              <a href='/'><li className='p-2'>Rail Freight</li></a>
-              <a href='/'><li className='p-2'>Landing</li></a>
-            </ul>
-
-          </li>
-
-          <li className='nav-link relative hover-trigger'>Services
-            <ul className=' hover-target absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
-              <a href='/'><li className='p-2'>Maritime Transport</li></a>
-              <a href='/'><li className='p-2'>Our Team </li></a>
-              <a href='/'><li className='p-2'>About us</li></a>
+          <li className='nav-link relative hover-trigger'> <a href='/'> Services </a>
+            <ul className=' hover-target text-left absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Maritime Transport</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Our Team </li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>About us</li></a>
             </ul>
           </li>
 
-          <li className='nav-link relative hover-trigger'>Blog
-            <ul className=' hover-target absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
-              <a href='/'><li className='p-2'>Air Freight</li></a>
-              <a href='/'><li className='p-2'>Maritime Transport</li></a>
-              <a href='/'><li className='p-2'>About us</li></a>
-              <a href='/'><li className='p-2'>Our Team </li></a>
+          <li className='nav-link relative hover-trigger'> <a href='/'> Blog </a>
+            <ul className=' hover-target text-left absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Air Freight</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Maritime Transport</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>About us</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Our Team </li></a>
 
             </ul>
           </li>
-          <li className='nav-link relative hover-trigger'>Contact
-            <ul className=' hover-target absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
-              <a href='/'><li className='p-2'>About us</li></a>
-              <a href='/'><li className='p-2'>Our Team </li></a>
+          <li className='nav-link relative hover-trigger'> <a href='/'> Contact </a>
+            <ul className=' hover-target text-left absolute top-12 bg-white text-primary p-2 w-[220px] rounded  '>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>About us</li></a>
+              <a href='/'><li className='p-2 hover:border-l-[4px] border-yellow-400'>Our Team </li></a>
 
             </ul>
           </li>

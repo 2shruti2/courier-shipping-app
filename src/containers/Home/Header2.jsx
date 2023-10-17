@@ -18,7 +18,7 @@ const Header2 = () => {
                 </div>
             </div>
 
-            <div className="  pl-16 max-md:pl-0 pt-10 overflow-hidden transition-all min-h-[200px] animate-[fade-in-down_1s_ease-in-out] ">
+            <div className="  pl-16 max-md:pl-0 pt-10 overflow-hidden transition-all min-h-[200px]  ">
                 <img className="" src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/main-home-img-1.jpg" alt="" />
             </div>
         </div>

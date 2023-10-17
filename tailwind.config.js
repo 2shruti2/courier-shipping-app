@@ -40,6 +40,50 @@ module.exports = {
             transform: 'translateX(0)'
           },
         },
+        fadein: {
+          '0%': {
+            opacity: '0.7',
+          
+          },
+        
+          '100%': {
+            opacity: '1',
+            background:"black"
+          },
+        },
+        fadein1: {
+          '0%': {
+            opacity: '0.7',
+          
+          },
+        
+          '100%': {
+            opacity: '1',
+            background:"black"
+          },
+        },
+        fadein2: {
+          '0%': {
+            opacity: '0.7',
+          
+          },
+        
+          '100%': {
+            opacity: '1',
+            background:"black"
+          },
+        },
+        fadein3: {
+          '0%': {
+            opacity: '0.7',
+          
+          },
+        
+          '100%': {
+            opacity: '1',
+            background:"black"
+          },
+        },
         comefromleft: {
           '0%': {
             opacity: '0',
@@ -75,6 +119,10 @@ module.exports = {
         left: 'comefromleft 0.5s ease-out',
         img: 'imgfromleft 0.5s ease-in',
         rotate: 'rotateCenter 0.5s ease-in',
+        fadein: 'fadein 0.5s ease-in ',
+        fadein1: 'fadein1 0.5s ease-in ',
+        fadein3: 'fadein3 0.5s ease-in ',
+        fadein2: 'fadein2 0.5s ease-in ',
       },
 
       fontFamily: {
